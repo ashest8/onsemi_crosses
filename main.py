@@ -1,5 +1,4 @@
-import openpyxl
+import pandas as pd
 
-database = openpyxl.load_workbook(filename=datasource/CrossReferenceReport_07_26_2022.csv)
-p = wb.sheet_names()
-printf(p)
+database = pd.read_csv("datasource/CrossReferenceReport_07_26_2022.csv", sep = ',')
+print(database[database["competitor_part"]=="LM5070SD-80"])
